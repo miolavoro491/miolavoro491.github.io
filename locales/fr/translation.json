@@ -1,0 +1,48 @@
+{
+  "landing_page": {
+    "hero_title": "FoodGest",
+    "hero_slogan": "Le système de gestion complet pour restaurants, pizzerias et bars. Simplifiez la gestion de votre établissement, augmentez votre efficacité et améliorez l'expérience de vos clients.",
+    "about_title": "À Propos",
+    "about_description": "FoodGest est une application web tout-en-un conçue pour numériser et simplifier chaque aspect de la gestion de votre établissement de restauration.",
+    "features_title": "Fonctionnalités Principales",
+    "feature_orders_title": "Gestion des Commandes",
+    "feature_orders_description": "Créez et gérez facilement les commandes : en salle, à emporter (avec numérotation quotidienne automatique) ou en livraison à domicile. Suivez chaque statut, appliquez des réductions, ajoutez des remarques et enregistrez les paiements.",
+    "feature_cash_title": "Caisse et Mouvements",
+    "feature_cash_description": "Gérez les encaissements, retraits et dépôts. Visualisez un récapitulatif détaillé quotidien et clôturez la caisse avec calcul automatique du fonds initial, de la somme attendue en espèces et des éventuelles différences.",
+    "feature_menu_title": "Menu Numérique",
+    "feature_menu_description": "Créez et organisez un menu multilingue avec produits, catégories et ingrédients. Personnalisez les options et variantes, gérez les images et la disponibilité, et recevez des alertes en cas de stocks bas.",
+    "feature_tables_title": "Gestion des Tables",
+    "feature_tables_description": "Organisez vos tables par zone et par statut. Générez des codes QR uniques pour chaque table afin que vos clients puissent commander directement depuis leur smartphone de manière autonome.",
+    "feature_deliveries_title": "Planification des Livraisons",
+    "feature_deliveries_description": "Calculez les temps de livraison estimés en utilisant les adresses et des données en temps réel (via l'API Mapbox), et suggérez automatiquement l'heure de début de préparation selon la distance et le trafic.",
+    "feature_kitchen_title": "Cuisine",
+    "feature_kitchen_description": "Gérez les commandes en temps réel, surveillez l'état de préparation et coordonnez efficacement votre personnel de cuisine.",
+    "feature_reports_title": "Rapports et Statistiques",
+    "feature_reports_description": "Analysez les ventes, commandes, mouvements de caisse et recettes par période, type ou mode de paiement. Prenez des décisions basées sur des données claires et actualisées.",
+    "feature_staff_title": "Gestion du Personnel",
+    "feature_staff_description": "Gérez votre personnel efficacement : visualisez et modifiez les informations des employés, organisez les plannings, enregistrez absences et congés, le tout depuis une plateforme unique et intuitive.",
+    "feature_promo_title": "Promotions et Réductions",
+    "feature_promo_description": "Créez des réductions personnalisées (montant fixe ou pourcentage) applicables sur des produits, catégories ou sur l'ensemble du menu. Planifiez les jours et horaires de validité, avec application automatique à la commande.",
+    "feature_inventory_title": "Gestion des Stocks",
+    "feature_inventory_description": "Surveillez en temps réel les niveaux de stock de produits et d'ingrédients, avec seuils minimums et alertes automatiques. Déduction automatique des ingrédients en fonction des commandes passées.",
+    "pricing_title": "Tarifs",
+    "pricing_description": "Un seul plan, clair et sans surprise.",
+    "plan_name": "Professional",
+    "per_month": "/mois",
+    "plan_feature_1": "Gestion illimitée des commandes et des tables",
+    "plan_feature_2": "Accès à tous les rapports quotidiens",
+    "plan_feature_3": "Support prioritaire par chat",
+    "plan_feature_4": "Mises à jour gratuites",
+    "pricing_cta_button": "Commencer maintenant",
+    "all_rights_reserved": "© 2025 FoodGest. Tous droits réservés.",
+    "privacy_policy_link": "Politique de Confidentialité"
+  },
+  "privacy_policy": {
+    "title": "Politique de Confidentialité",
+    "intro": "Cette politique de confidentialité régit le traitement des données personnelles effectué par FoodGest. Nous collectons uniquement les informations minimales nécessaires pour fournir le service. Nous ne vendons pas vos données à des tiers. Vous pouvez retirer votre consentement à tout moment.",
+    "cookies": "Nous utilisons des cookies techniques essentiels. Vous pouvez gérer vos préférences dans votre navigateur."
+  },
+  "common": {
+    "close": "Fermer"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "landing_page": {
+    "hero_title": "FoodGest",
+    "hero_slogan": "Il gestionale completo per ristoranti, pizzerie e pub. Semplifica la gestione del tuo locale, aumenta l'efficienza e migliora l'esperienza dei tuoi clienti.",
+    "about_title": "Chi Siamo",
+    "about_description": "FoodGest è l'applicazione web all-in-one progettata per digitalizzare e semplificare ogni aspetto della gestione della tua attività di ristorazione.",
+    "features_title": "Funzionalità Principali",
+    "feature_orders_title": "Gestione Ordini",
+    "feature_orders_description": "Crea e gestisci ordini in modo completo: al tavolo, da asporto (con numerazione automatica giornaliera) o per consegna a domicilio. Traccia ogni stato dell'ordine, applica sconti, aggiungi note e registra i pagamenti.",
+    "feature_cash_title": "Cassa e Movimenti",
+    "feature_cash_description": "Gestisci incassi, prelievi e depositi. Visualizza un riepilogo dettagliato giornaliero e chiudi la cassa con calcolo automatico del fondo iniziale, contante atteso ed eventuali differenze.",
+    "feature_menu_title": "Menù Digitale",
+    "feature_menu_description": "Crea e organizza un menu multilingua con prodotti, categorie e ingredienti. Personalizza opzioni e varianti, gestisci immagini e disponibilità, e ricevi avvisi per scorte minime.",
+    "feature_tables_title": "Gestione Tavoli",
+    "feature_tables_description": "Organizza i tavoli per area e stato. Genera QR code unici per ogni tavolo per permettere ai clienti di ordinare direttamente dal proprio smartphone in modo autonomo.",
+    "feature_deliveries_title": "Pianificazione Consegne",
+    "feature_deliveries_description": "Calcola i tempi stimati di consegna utilizzando indirizzi e dati real-time (via API Mapbox) e suggerisce automaticamente l'orario di inizio preparazione in base alla distanza e al traffico.",
+	"feature_kitchen_title": "Cucina",
+    "feature_kitchen_description": "Gestisci gli ordini in tempo reale, monitora lo stato di preparazione e coordina il tuo personale di cucina in modo efficiente.",
+    "feature_reports_title": "Report e Statistiche",
+    "feature_reports_description": "Analizza vendite, ordini, movimenti di cassa e incassi per periodo, tipologia e metodo di pagamento. Prendi decisioni basate su dati chiari e aggiornati.",
+    "feature_staff_title": "Gestione Personale",
+    "feature_staff_description": "Gestisci il tuo personale in modo efficiente: visualizza e modifica i dettagli dei dipendenti, organizza turni di lavoro, registra assenze e ferie, tutto da un'unica piattaforma intuitiva.",
+    "feature_promo_title": "Sconti e Promozioni",
+    "feature_promo_description": "Crea sconti personalizzati (fissi o percentuali) applicabili su prodotti, categorie o sull'intero menu. Pianifica giorni e orari di validità e applicazione automatica all'ordine.",
+    "feature_inventory_title": "Controllo Magazzino",
+    "feature_inventory_description": "Monitora in tempo reale le scorte di prodotti e ingredienti, con gestione soglie minime e avvisi automatici. Deduzione automatica degli ingredienti in base agli ordini effettuati.",
+    "pricing_title": "Prezzi",
+    "pricing_description": "Un piano unico, chiaro e senza sorprese.",
+    "plan_name": "Professional",
+    "per_month": "/mese",
+    "plan_feature_1": "Gestione illimitata di ordini e tavoli",
+    "plan_feature_2": "Accesso a tutti i report giornalieri",
+    "plan_feature_3": "Supporto prioritario via chat",
+    "plan_feature_4": "Aggiornamenti gratuiti",
+    "pricing_cta_button": "Inizia ora",
+    "all_rights_reserved": "© 2025 FoodGest. Tutti i diritti riservati.",
+    "privacy_policy_link": "Informativa sulla Privacy"
+  },
+  "privacy_policy": {
+    "title": "Informativa sulla Privacy",
+    "intro": "La presente Informativa sulla Privacy descrive come FoodGest raccoglie, utilizza e protegge le tue informazioni personali quando utilizzi la nostra applicazione. Ci impegniamo a garantire la massima trasparenza e sicurezza nel trattamento dei dati, in conformità con il GDPR. Raccogliamo solo le informazioni necessarie per fornire il servizio e non vendiamo i tuoi dati a terzi. Puoi revocare il consenso in qualsiasi momento contattandoci.",
+    "cookies": "Utilizziamo esclusivamente cookie tecnici essenziali per il funzionamento dell'applicazione. Questi cookie non profilano il tuo comportamento e non raccolgono dati personali a fini pubblicitari. Puoi gestire o disabilitare i cookie attraverso le impostazioni del tuo browser, ma alcune funzionalità dell'app potrebbero non funzionare correttamente senza di essi."
+  },
+  "common": {
+    "close": "Chiudi"
+  }
+}

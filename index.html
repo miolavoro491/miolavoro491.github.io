@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FoodGest - Gestione Ristoranti</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons via CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    :root {
+      --background: #ffffff;
+      --foreground: #111827;
+      --muted: #f3f4f6;
+      --muted-foreground: #6b7280;
+      --primary: #eba747;
+      --primary-foreground: #ffffff;
+      --secondary: #6b7280;
+      --secondary-foreground: #ffffff;
+      --border: #d1d5db;
+      --radius: 0.5rem;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--background);
+      color: var(--foreground);
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Playfair Display', serif;
+      margin-top: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    /* Hero Section - Responsive Background */
+    .hero {
+      position: relative;
+      min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    /* Desktop */
+    @media (min-width: 768px) {
+      .hero {
+        background-image: url('assets/background-login.jpg');
+      }
+    }
+
+    /* Mobile */
+    @media (max-width: 767px) {
+      .hero {
+        background-image: url('assets/background-login-mobile.jpg');
+        min-height: 50vh;
+      }
+    }
+
+    /* Overlay nero semi-trasparente */
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      padding: 1.5rem;
+      max-width: 24rem;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-size: 2.25rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      color: white;
+    }
+
+    .hero p {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.7;
+    }
+
+    /* Language Selector */
+    .language-selector {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      z-index: 20;
+    }
+
+    .language-selector select {
+      background: transparent;
+      border: 1px solid white;
+      color: white;
+      padding: 0.5rem 1.5rem 0.5rem 0.75rem;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      width: 50px;
+      height: 40px;
+      appearance: none;
+      -webkit-appearance: none;
+      background-repeat: no-repeat;
+      background-position: right 0.5rem center;
+      vertical-align: middle;
+      line-height: 1.2;
+      font-family: sans-serif;
+    }
+
+    /* Navigation */
+    .nav {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      z-index: 20;
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .btn {
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius);
+      font-size: 0.875rem;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: white;
+      border: 1px solid white;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: var(--primary-foreground);
+      border: none;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+
+    /* Sections */
+    .section {
+      padding: 3rem 0;
+    }
+
+    .section-muted {
+      background: var(--muted);
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .text-muted-foreground {
+      color: var(--muted-foreground);
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Features */
+    .features-list {
+      max-width: 32rem;
+      margin: 0 auto;
+    }
+
+    .feature-card {
+      display: flex;
+      align-items: center;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      padding: 1rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      margin-bottom: 0.75rem;
+    }
+
+    .feature-icon {
+      margin-right: 1rem;
+      padding: 0.5rem;
+      border-radius: 9999px;
+      background: rgba(0, 111, 84, 0.1);
+      color: var(--primary);
+    }
+
+    .feature-text h3 {
+      margin: 0 0 0.25rem 0;
+      font-size: 1.125rem;
+      font-weight: 600;
+    }
+
+    .feature-text p {
+      margin: 0;
+      font-size: 0.875rem;
+      color: var(--muted-foreground);
+    }
+
+    /* Pricing */
+    .pricing-card {
+      max-width: 32rem;
+      margin: 0 auto;
+      background: white;
+      border-radius: var(--radius);
+      overflow: hidden;
+      padding: 1.5rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .pricing-header h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .price {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: var(--primary);
+    }
+
+    .price span {
+      font-size: 1rem;
+      font-weight: normal;
+      color: var(--muted-foreground);
+    }
+
+    .pricing-features {
+      list-style: none;
+      padding: 0;
+      margin: 1.5rem 0;
+    }
+
+    .pricing-features li {
+      display: flex;
+      align-items: center;
+      font-size: 0.875rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .pricing-features li::before {
+      content: '✔';
+      color: var(--primary);
+      margin-right: 0.5rem;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--secondary);
+      color: var(--secondary-foreground);
+      padding: 1.5rem 0;
+      text-align: center;
+    }
+
+    footer a, footer span {
+      color: var(--secondary-foreground);
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    footer a:hover, footer span:hover {
+      text-decoration: underline;
+    }
+
+    /* Modal */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-overlay.open {
+      display: flex;
+    }
+
+    .modal {
+      background: white;
+      border-radius: var(--radius);
+      max-width: 90%;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 2rem;
+      box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    }
+
+    .modal h3 {
+      margin-top: 0;
+    }
+
+    .close-button {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: var(--radius);
+      cursor: pointer;
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      .hero p {
+        font-size: 0.9rem;
+      }
+      .btn {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+      }
+      .nav {
+        flex-direction: column;
+      }
+      .language-selector select {
+        width: auto;
+        min-width: 60px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .language-selector select {
+        vertical-align: middle;
+        line-height: 1.2;
+        font-family: sans-serif;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 data-i18n="landing_page.hero_title">FoodGest</h1>
+      <p data-i18n="landing_page.hero_slogan">Gestisci il tuo ristorante in modo semplice, veloce e professionale.</p>
+    </div>
+
+    <!-- Language Selector -->
+    <div class="language-selector">
+      <select id="language-select">
+        <option value="it">🇮🇹</option>
+        <option value="en">🇬🇧</option>
+        <option value="fr">🇫🇷</option>
+        <option value="es">🇪🇸</option>
+      </select>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+    </nav>
+  </section>
+
+  <!-- About Section -->
+  <section class="section">
+    <div class="container text-center">
+      <h2 data-i18n="landing_page.about_title">Cos'è FoodGest?</h2>
+      <p class="text-muted-foreground" data-i18n="landing_page.about_description">
+        Una soluzione completa per la gestione di ristoranti, bar e attività di ristorazione. Dalla cucina al magazzino, tutto sotto controllo.
+      </p>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="section section-muted">
+    <div class="container">
+      <h2 class="text-center" data-i18n="landing_page.features_title">Funzionalità</h2>
+      <div class="features-list">
+        <div class="feature-card">
+          <div class="feature-icon"><i data-lucide="shopping-cart"></i></div>
+          <div class="feature-text">
+            <h3 data-i18n="landing_page.feature_orders_title">Gestione Ordini</h3>
+            <p data-i18n="landing_page.feature_orders_description">Accetta e gestisci ordini da sala, asporto e consegna.</p>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i data-lucide="utensils"></i></div>
+          <div class="feature-text">
+            <h3 data-i18n="landing_page.feature_cash_title">Cassa Integrata</h3>
+            <p data-i18n="landing_page.feature_cash_description">Chiudi il conto in pochi secondi con scontrini fiscali.</p>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i data-lucide="menu"></i></div>
+          <div class="feature-text">
+            <h3 data-i18n="landing_page.feature_menu_title">Menù Digitale</h3>
+            <p data-i18n="landing_page.feature_menu_description">Crea e aggiorna il tuo menù in tempo reale.</p>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i data-lucide="table"></i></div>
+          <div class="feature-text">
+            <h3 data-i18n="landing_page.feature_tables_title">Piantina Tavoli</h3>
+            <p data-i18n="landing_page.feature_tables_description">Assegna e monitora i tavoli in tempo reale.</p>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i data-lucide="truck"></i></div>
+          <div class="feature-text">
+            <h3 data-i18n="landing_page.feature_deliveries_title">Consegne</h3>
+            <p data-i18n="landing_page.feature_deliveries_description">Integrazione con servizi di delivery o gestione interna.</p>
+          </div>
+        </div>
+
+        <!-- NUOVE FUNZIONALITÀ - Inserite nella stessa sezione -->
+        <div class="feature-card">
+          <div class="feature-icon"><i data-lucide="flame"></i></div>
+          <div class="feature-text">
+            <h3 data-i18n="landing_page.feature_kitchen_title">Cucina</h3>
+            <p data-i18n="landing_page.feature_kitchen_description">Monitora gli ordini in cucina, visualizza preparazioni in corso e gestisci le priorità.</p>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i data-lucide="bar-chart-3"></i></div>
+          <div class="feature-text">
+            <h3 data-i18n="landing_page.feature_reports_title">Report e Statistiche</h3>
+            <p data-i18n="landing_page.feature_reports_description">Analisi dettagliate su vendite, prodotti più venduti e performance del personale.</p>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i data-lucide="users"></i></div>
+          <div class="feature-text">
+            <h3 data-i18n="landing_page.feature_staff_title">Gestione Personale</h3>
+            <p data-i18n="landing_page.feature_staff_description">Gestisci turni, permessi, accessi e livelli di autorizzazione del team.</p>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i data-lucide="percent"></i></div>
+          <div class="feature-text">
+            <h3 data-i18n="landing_page.feature_promo_title">Sconti e Promozioni</h3>
+            <p data-i18n="landing_page.feature_promo_description">Crea codici sconto, promozioni per fasce orarie o offerte per clienti fedeli.</p>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i data-lucide="package"></i></div>
+          <div class="feature-text">
+            <h3 data-i18n="landing_page.feature_inventory_title">Controllo Magazzino</h3>
+            <p data-i18n="landing_page.feature_inventory_description">Tieni traccia degli ingredienti, ricevi avvisi di scorte basse e gestisci ordini ai fornitori.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="section">
+    <div class="container">
+      <h2 class="text-center" data-i18n="landing_page.pricing_title">Prezzi</h2>
+      <p class="text-center text-muted-foreground" data-i18n="landing_page.pricing_description">
+        Un piano unico, chiaro e senza sorprese.
+      </p>
+
+      <div class="pricing-card">
+        <div class="pricing-header">
+          <h3 data-i18n="landing_page.plan_name">Professional</h3>
+          <div class="price">
+            €39<span data-i18n="landing_page.per_month">/mese</span>
+          </div>
+        </div>
+        <ul class="pricing-features">
+          <li data-i18n="landing_page.plan_feature_1">Gestione illimitata di ordini e tavoli</li>
+          <li data-i18n="landing_page.plan_feature_2">Accesso a tutti i report giornalieri</li>
+          <li data-i18n="landing_page.plan_feature_3">Supporto prioritario via chat</li>
+          <li data-i18n="landing_page.plan_feature_4">Aggiornamenti gratuiti</li>
+        </ul>
+        <a href="https://play.google.com/" class="btn btn-primary" style="width:100%" data-i18n="landing_page.pricing_cta_button" target="_blank" rel="noopener">Inizia ora</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p data-i18n="landing_page.all_rights_reserved">&copy; 2025 FoodGest. Tutti i diritti riservati.</p>
+      <div>
+        <span id="open-privacy" class="hover:underline cursor-pointer" data-i18n="landing_page.privacy_policy_link">Informativa sulla Privacy</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Privacy Policy Modal -->
+  <div id="privacy-modal" class="modal-overlay">
+    <div class="modal">
+      <h3 data-i18n="privacy_policy.title">Informativa sulla Privacy</h3>
+      <p data-i18n="privacy_policy.intro">
+        Questa informativa privacy regola il trattamento dei dati personali effettuato da FoodGest.
+        Raccogliamo informazioni minime necessarie per fornire il servizio.
+        Non vendiamo i tuoi dati a terzi. Puoi revocare il consenso in qualsiasi momento.
+      </p>
+      <p data-i18n="privacy_policy.cookies">
+        Utilizziamo cookie tecnici essenziali. Puoi gestire le preferenze nel tuo browser.
+      </p>
+      <button class="close-button" id="close-privacy" data-i18n="common.close">Chiudi</button>
+    </div>
+  </div>
+
+  <!-- Initialize Lucide Icons -->
+  <script>
+    lucide.createIcons();
+  </script>
+
+  <!-- Translation System -->
+  <script>
+    let currentLang = localStorage.getItem('language') || 'it';
+    let translations = {};
+
+    // Carica il file JSON delle traduzioni
+    async function loadTranslations(lang) {
+      try {
+        const res = await fetch(`locales/${lang}/translation.json`);
+        if (!res.ok) throw new Error(`File non trovato: ${lang}`);
+        translations[lang] = await res.json();
+      } catch (err) {
+        console.warn(`Errore nel caricamento delle traduzioni per ${lang}:`, err);
+        // Carica italiano come fallback
+        if (lang !== 'it') {
+          await loadTranslations('it');
+          currentLang = 'it';
+          document.getElementById('language-select').value = 'it';
+        }
+      }
+    }
+
+    // Funzione di traduzione
+    function t(key, lang = currentLang) {
+      const keys = key.split('.');
+      let result = translations[lang];
+      if (!result) return key;
+      for (const k of keys) {
+        if (result && result[k] !== undefined) {
+          result = result[k];
+        } else {
+          return key;
+        }
+      }
+      return result;
+    }
+
+    // Aggiorna tutti gli elementi con data-i18n
+    function updateTranslations() {
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+          el.placeholder = t(key);
+        } else {
+          el.innerText = t(key);
+        }
+      });
+      lucide.createIcons(); // ricrea icone
+    }
+
+    // Cambia lingua
+    document.getElementById('language-select').addEventListener('change', async (e) => {
+      currentLang = e.target.value;
+      localStorage.setItem('language', currentLang);
+      await loadTranslations(currentLang);
+      updateTranslations();
+    });
+
+    // Modal handlers
+    const modal = document.getElementById('privacy-modal');
+    document.getElementById('open-privacy').addEventListener('click', () => {
+      modal.classList.add('open');
+      updateTranslations();
+    });
+    document.getElementById('close-privacy').addEventListener('click', () => {
+      modal.classList.remove('open');
+    });
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) modal.classList.remove('open');
+    });
+
+    // Inizializza
+    async function initI18n() {
+      await loadTranslations(currentLang);
+      document.getElementById('language-select').value = currentLang;
+      updateTranslations();
+    }
+
+    initI18n();
+  </script>
+
+</body>
+</html>

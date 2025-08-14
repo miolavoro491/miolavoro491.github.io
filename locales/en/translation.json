@@ -1,0 +1,48 @@
+{
+  "landing_page": {
+    "hero_title": "FoodGest",
+    "hero_slogan": "The complete management system for restaurants, pizzerias, and pubs. Simplify your venue management, increase efficiency, and enhance your customers' experience.",
+    "about_title": "About Us",
+    "about_description": "FoodGest is an all-in-one web application designed to digitize and simplify every aspect of managing your food and beverage business.",
+    "features_title": "Main Features",
+    "feature_orders_title": "Order Management",
+    "feature_orders_description": "Create and manage orders comprehensively: at the table, takeaway (with automatic daily numbering), or home delivery. Track each order status, apply discounts, add notes, and record payments.",
+    "feature_cash_title": "Cash Register & Transactions",
+    "feature_cash_description": "Manage cash inflows, withdrawals, and deposits. View a detailed daily summary and close the register with automatic calculation of the initial float, expected cash, and any discrepancies.",
+    "feature_menu_title": "Digital Menu",
+    "feature_menu_description": "Create and organize a multilingual menu with products, categories, and ingredients. Customize options and variants, manage images and availability, and receive low-stock alerts.",
+    "feature_tables_title": "Table Management",
+    "feature_tables_description": "Organize tables by area and status. Generate unique QR codes for each table, allowing customers to place orders directly from their smartphones autonomously.",
+    "feature_deliveries_title": "Delivery Scheduling",
+    "feature_deliveries_description": "Estimate delivery times using addresses and real-time data (via Mapbox API), and automatically suggest the optimal preparation start time based on distance and traffic conditions.",
+    "feature_kitchen_title": "Kitchen",
+    "feature_kitchen_description": "Manage orders in real time, monitor preparation status, and efficiently coordinate your kitchen staff.",
+    "feature_reports_title": "Reports & Statistics",
+    "feature_reports_description": "Analyze sales, orders, cash transactions, and revenue by period, order type, and payment method. Make decisions based on clear, up-to-date data.",
+    "feature_staff_title": "Staff Management",
+    "feature_staff_description": "Efficiently manage your staff: view and edit employee details, organize work shifts, record absences and vacations—all from a single intuitive platform.",
+    "feature_promo_title": "Discounts & Promotions",
+    "feature_promo_description": "Create custom discounts (fixed or percentage-based) applicable to products, categories, or the entire menu. Schedule validity days and times, with automatic application at checkout.",
+    "feature_inventory_title": "Inventory Control",
+    "feature_inventory_description": "Monitor product and ingredient stock levels in real time, with minimum threshold management and automatic alerts. Automatic ingredient deduction based on placed orders.",
+    "pricing_title": "Pricing",
+    "pricing_description": "One simple plan, clear and without surprises.",
+    "plan_name": "Professional",
+    "per_month": "/month",
+    "plan_feature_1": "Unlimited order and table management",
+    "plan_feature_2": "Access to all daily reports",
+    "plan_feature_3": "Priority chat support",
+    "plan_feature_4": "Free updates",
+    "pricing_cta_button": "Get Started",
+    "all_rights_reserved": "© 2025 FoodGest. All rights reserved.",
+    "privacy_policy_link": "Privacy Policy"
+  },
+  "privacy_policy": {
+    "title": "Privacy Policy",
+    "intro": "This privacy policy governs the processing of personal data carried out by FoodGest. We collect only the minimum information necessary to provide our service. We do not sell your data to third parties. You can withdraw your consent at any time.",
+    "cookies": "We use essential technical cookies. You can manage your preferences through your browser settings."
+  },
+  "common": {
+    "close": "Close"
+  }
+}

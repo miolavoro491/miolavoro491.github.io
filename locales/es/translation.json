@@ -1,0 +1,48 @@
+{
+  "landing_page": {
+    "hero_title": "FoodGest",
+    "hero_slogan": "El sistema de gestión completo para restaurantes, pizzerías y bares. Simplifica la gestión de tu local, aumenta la eficiencia y mejora la experiencia de tus clientes.",
+    "about_title": "Quiénes Somos",
+    "about_description": "FoodGest es una aplicación web todo en uno diseñada para digitalizar y simplificar todos los aspectos de la gestión de tu negocio de restauración.",
+    "features_title": "Funcionalidades Principales",
+    "feature_orders_title": "Gestión de Pedidos",
+    "feature_orders_description": "Crea y gestiona pedidos de forma completa: en mesa, para llevar (con numeración diaria automática) o entrega a domicilio. Haz seguimiento del estado de cada pedido, aplica descuentos, añade notas y registra pagos.",
+    "feature_cash_title": "Caja y Movimientos",
+    "feature_cash_description": "Gestiona ingresos, retiros y depósitos. Visualiza un resumen detallado diario y cierra la caja con cálculo automático del fondo inicial, efectivo esperado y posibles diferencias.",
+    "feature_menu_title": "Menú Digital",
+    "feature_menu_description": "Crea y organiza un menú multilingüe con productos, categorías e ingredientes. Personaliza opciones y variantes, gestiona imágenes y disponibilidad, y recibe alertas de stock mínimo.",
+    "feature_tables_title": "Gestión de Mesas",
+    "feature_tables_description": "Organiza las mesas por zona y estado. Genera códigos QR únicos para cada mesa que permitan a los clientes pedir directamente desde su smartphone de forma autónoma.",
+    "feature_deliveries_title": "Planificación de Entregas",
+    "feature_deliveries_description": "Calcula los tiempos estimados de entrega usando direcciones y datos en tiempo real (mediante API de Mapbox) y sugiere automáticamente la hora de inicio de preparación según la distancia y el tráfico.",
+    "feature_kitchen_title": "Cocina",
+    "feature_kitchen_description": "Gestiona los pedidos en tiempo real, monitorea el estado de preparación y coordina eficientemente a tu personal de cocina.",
+    "feature_reports_title": "Informes y Estadísticas",
+    "feature_reports_description": "Analiza ventas, pedidos, movimientos de caja e ingresos por periodo, tipo y método de pago. Toma decisiones basadas en datos claros y actualizados.",
+    "feature_staff_title": "Gestión de Personal",
+    "feature_staff_description": "Gestiona tu personal de forma eficiente: visualiza y edita los datos de los empleados, organiza turnos de trabajo, registra ausencias y vacaciones, todo desde una única plataforma intuitiva.",
+    "feature_promo_title": "Descuentos y Promociones",
+    "feature_promo_description": "Crea descuentos personalizados (fijos o porcentuales) aplicables a productos, categorías o a todo el menú. Programa días y horarios de vigencia y aplicación automática al pedido.",
+    "feature_inventory_title": "Control de Inventario",
+    "feature_inventory_description": "Monitorea en tiempo real las existencias de productos e ingredientes, con gestión de niveles mínimos y alertas automáticas. Deducción automática de ingredientes según los pedidos realizados.",
+    "pricing_title": "Precios",
+    "pricing_description": "Un solo plan, claro y sin sorpresas.",
+    "plan_name": "Professional",
+    "per_month": "/mes",
+    "plan_feature_1": "Gestión ilimitada de pedidos y mesas",
+    "plan_feature_2": "Acceso a todos los informes diarios",
+    "plan_feature_3": "Soporte prioritario por chat",
+    "plan_feature_4": "Actualizaciones gratuitas",
+    "pricing_cta_button": "Comenzar ahora",
+    "all_rights_reserved": "© 2025 FoodGest. Todos los derechos reservados.",
+    "privacy_policy_link": "Política de Privacidad"
+  },
+  "privacy_policy": {
+    "title": "Política de Privacidad",
+    "intro": "Esta política de privacidad regula el tratamiento de datos personales realizado por FoodGest. Recopilamos solo la información mínima necesaria para prestar el servicio. No vendemos tus datos a terceros. Puedes revocar tu consentimiento en cualquier momento.",
+    "cookies": "Utilizamos cookies técnicas esenciales. Puedes gestionar tus preferencias en tu navegador."
+  },
+  "common": {
+    "close": "Cerrar"
+  }
+}
